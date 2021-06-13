@@ -71,8 +71,8 @@ char bufferZ [20];
 // Stepper Motors Outputs
 #define ENABLE 5 // same out for 2 motors
 #define STEP   4 // same out for 2 motors
-#define A_DIR    2
-#define B_DIR    3
+#define A_DIR    3
+#define B_DIR    2
 
 // Movement states
 #define MOVING    0
@@ -105,9 +105,6 @@ float mAngle = 0; //in degrees
 float mRadius = 0; 
 float eskiAngle = 90; // starting angle is 90
 float eskiRadius = 0;
-
-//float xler[6] = { 10.0 , 30.0 , 0.0 , -15.0 , -25.0 , 15.0 };
-//float yler[6] = { 10.0 , 10.0 , 20.0 , 15.0 , -10.0 , -5.0 };
 
 void waitForButton(){ 
   int val=analogRead(A0);
@@ -210,9 +207,17 @@ void setup() {
 
   oledPrint();
 
+/*
   //read first line to get the PCB_width
+  fileLine = pnpFile.readStringUntil('\n');
+  parseCommand(fileLine+" ");
+  // field[0] width
+  // field[1] value
   
-
+  if(String(field[0]) == "width") {
+    Pcb_width = atof(field[1]);
+  }
+*/
 
 }//setup
 
@@ -240,10 +245,6 @@ void loop() {
   sprintf(bufferZ, "ARRIVED"); // ARRIVED
  
   oledPrint();
-
-
-  
-  
 
 }//loop
 
