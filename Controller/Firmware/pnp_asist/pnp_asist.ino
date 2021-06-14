@@ -71,8 +71,8 @@ char bufferZ [20];
 // Stepper Motors Outputs
 #define ENABLE 5 // same out for 2 motors
 #define STEP   4 // same out for 2 motors
-#define A_DIR    7
-#define B_DIR    8
+#define A_DIR    8
+#define B_DIR    7
 
 // Movement states
 #define MOVING    0
@@ -81,7 +81,7 @@ char bufferZ [20];
 
 //length of y axis
 #define MAX_Y_LENGTH 250
-#define CENTER_Y_OFFSET 56
+#define CENTER_Y_OFFSET 45400
 
 #define SEARCH_HOME_SWITCH_SPEED 4000
 #define SLOW_HOMING_SPEED 500
@@ -208,7 +208,9 @@ void setup() {
               delay(100);
               setMotorSpeed(iDriveSpeed);
               
-              CenterY();
+              G1Y(CENTER_Y_OFFSET); // goto center
+
+              
 
               
               
@@ -339,9 +341,7 @@ void Home(float distance, float Speed){
   git(distance);  
 }
 
-void CenterY(){
-  git (CENTER_Y_OFFSET);
-}
+
 
 void yHomeReached(){ //Interrupt function
   if(yFindZero) {
