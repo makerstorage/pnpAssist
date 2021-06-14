@@ -71,12 +71,23 @@ char bufferZ [20];
 // Stepper Motors Outputs
 #define ENABLE 5 // same out for 2 motors
 #define STEP   4 // same out for 2 motors
-#define A_DIR    3
-#define B_DIR    2
+#define A_DIR    7
+#define B_DIR    8
 
 // Movement states
 #define MOVING    0
 #define ARRIVED   1
+
+
+//length of y axis
+#define MAX_Y_LENGTH 250
+#define CENTER_Y_OFFSET 56
+
+#define SEARCH_HOME_SWITCH_SPEED 4000
+#define SLOW_HOMING_SPEED 500
+
+// homing trigered flag
+volatile bool yFindZero = false;
 
 //SD CSPIN
 #define CSPIN 6
@@ -84,13 +95,16 @@ char bufferZ [20];
 //button analog value
 #define BUTTON_ANALOG_VAL 80
 
+//button y home switch
+const byte yHomePin = 2;
+
 //Y Coordinate Offsets
 #define Y_OFFSET 22
 // X Coordinate Offset is half of PCB width
 float Pcb_width = 0;
 
 // Stepper speeds in RPM
-int iDriveSpeed = 4000;
+int iDriveSpeed = 5000;
 
 volatile long CurPos         = 0;
 volatile long TargetPos      = 0;
@@ -144,7 +158,7 @@ void don(float angle){
 
 void git(float y){
 
-  int distance = round(y * StepPerMM);
+  float distance = round(y * StepPerMM);
   G1Y(distance);
  
   //String l="G1Y"+String(y)+"F"+String(SPEED);
@@ -165,19 +179,40 @@ void gonder(){
 
 void setup() {
 
-   Timer1.initialize(150000/iDriveSpeed);
-   // attach the motor intrupt service routine here
-   Timer1.attachInterrupt( updateMotors ); 
-   setMotorSpeed(iDriveSpeed);
-   StepRelease();
-   
-   Serial.begin(115200);
+  Timer1.initialize(150000/iDriveSpeed);
+  // attach the motor intrupt service routine here
+  Timer1.attachInterrupt( updateMotors ); 
+  setMotorSpeed(iDriveSpeed);
+  StepRelease();
+ 
+  Serial.begin(115200);
 
-   //pullup button analog read pin
-   pinMode(A0, INPUT_PULLUP);
+  //pullup button analog read pin
+  pinMode(A0, INPUT_PULLUP);
 
+  pinMode(yHomePin, INPUT);
+  attachInterrupt(digitalPinToInterrupt(yHomePin), yHomeReached, RISING);
 
+              // homing
+              sprintf(bufferX, "MakerStorage");
+              sprintf(bufferY, "Homing......");
+              sprintf(bufferZ, "PnPAssist");
+              
+              Home(-3000, SEARCH_HOME_SWITCH_SPEED);
+              delay(100);
 
+              git (10);
+              
+              delay(100);
+              Home(-110, SLOW_HOMING_SPEED);
+              delay(100);
+              setMotorSpeed(iDriveSpeed);
+              
+              CenterY();
+
+              
+              
+ 
   sprintf(bufferX, "MakerStorage");
   sprintf(bufferY, "----------");
   sprintf(bufferZ, "PnPAssist");
@@ -298,6 +333,24 @@ void G1Y(long pulseCount){
   
 }
 
+void Home(float distance, float Speed){
+  yFindZero = true;
+  setMotorSpeed(Speed);
+  git(distance);  
+}
+
+void CenterY(){
+  git (CENTER_Y_OFFSET);
+}
+
+void yHomeReached(){ //Interrupt function
+  if(yFindZero) {
+    yFindZero = false;
+    Status = ARRIVED;
+    CurPos = 0;
+    TargetPos = 0;
+  }
+}
 
 
 // Called 800 times per second when y speed is 120 rpm
