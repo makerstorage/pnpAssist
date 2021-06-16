@@ -98,10 +98,7 @@ volatile bool yFindZero = false;
 //button y home switch
 const byte yHomePin = 2;
 
-//Y Coordinate Offsets
-#define Y_OFFSET 22
-// X Coordinate Offset is half of PCB width
-float Pcb_width = 0;
+
 
 // Stepper speeds in RPM
 int iDriveSpeed = 5000;
