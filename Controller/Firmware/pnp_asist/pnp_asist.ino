@@ -92,8 +92,8 @@ volatile bool yFindZero = false;
 //SD CSPIN
 #define CSPIN 6
 
-//button analog value
-#define BUTTON_ANALOG_VAL 80
+//button 
+#define NEXT_BUTTON_PIN A0
 
 //button y home switch
 const byte yHomePin = 2;
@@ -118,19 +118,16 @@ float eskiAngle = 90; // starting angle is 90
 float eskiRadius = 0;
 
 void waitForButton(){ 
-  int val=analogRead(A0);
+  int val = digitalRead(NEXT_BUTTON_PIN);
   
-  while(!(val>=0&&val<=BUTTON_ANALOG_VAL)) {
-    val=analogRead(A0);
+  //Wait for the button
+  
+  while(val == LOW) {
+    val = digitalRead(NEXT_BUTTON_PIN);
   }
   
   delay(10);
-  
-  while((val>=0&&val<=BUTTON_ANALOG_VAL)) {
-    val=analogRead(A0);
-  }
-  
-  delay(10);
+ 
   
 }
 
@@ -184,8 +181,8 @@ void setup() {
  
   Serial.begin(115200);
 
-  //pullup button analog read pin
-  pinMode(A0, INPUT_PULLUP);
+  //next button as input
+  pinMode(NEXT_BUTTON_PIN, INPUT);
 
   pinMode(yHomePin, INPUT);
   attachInterrupt(digitalPinToInterrupt(yHomePin), yHomeReached, RISING);
