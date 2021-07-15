@@ -87,7 +87,7 @@ char bufferZ [20];
 #define SLOW_HOMING_SPEED 500
 
 // homing trigered flag
-volatile bool yFindZero = false;
+volatile bool FindZero = false;
 
 //SD CSPIN
 #define CSPIN 6
@@ -126,9 +126,7 @@ void waitForButton(){
     val = digitalRead(NEXT_BUTTON_PIN);
   }
   
-  delay(10);
- 
-  
+  delay(10);  
 }
 
 
@@ -185,24 +183,51 @@ void setup() {
   pinMode(NEXT_BUTTON_PIN, INPUT);
 
   pinMode(yHomePin, INPUT);
-  attachInterrupt(digitalPinToInterrupt(yHomePin), yHomeReached, RISING);
+  attachInterrupt(digitalPinToInterrupt(yHomePin), HomeSwitchReached, RISING);
 
               // homing
               sprintf(bufferX, "MakerStorage");
               sprintf(bufferY, "Homing......");
               sprintf(bufferZ, "PnPAssist");
               
-              Home(-3000, SEARCH_HOME_SWITCH_SPEED);
+              HomeY(-3000, SEARCH_HOME_SWITCH_SPEED);
               delay(100);
 
+              // move back alittle
               git (10);
+              delay(100);
+
+              // seach home slowly
+              HomeY(-110, SLOW_HOMING_SPEED);
+              delay(100);
+
               
+              // move back alittle for the rotary notch
+              git (1.5);
               delay(100);
-              Home(-110, SLOW_HOMING_SPEED);
+              
+              // homing Rotary Axis 
+              HomePolar(365, SEARCH_HOME_SWITCH_SPEED);
               delay(100);
+
+              // turn back alittle
+              don (-20);
+              delay(100);
+
+              // seach home slowly
+              HomePolar(100, SLOW_HOMING_SPEED);
+              delay(100);
+
+            
+              // Goto Center
               setMotorSpeed(iDriveSpeed);
-              
               G1Y(CENTER_Y_OFFSET); // goto center
+
+               // Set Angle to 0
+              don (45);
+              delay(100);
+
+              // we are all at home :)
 
               
 
@@ -251,6 +276,28 @@ void setup() {
 */
 
 }//setup
+
+void HomeY(float distance, float Speed){
+  FindZero = true;
+  setMotorSpeed(Speed);
+  git(distance);  
+}
+
+void HomePolar(float angle, float Speed){
+  FindZero = true;
+  setMotorSpeed(Speed);
+  don(angle);  
+}
+
+
+void HomeSwitchReached(){ //Interrupt function
+  if(FindZero) {
+    FindZero = false;
+    Status = ARRIVED;
+    CurPos = 0;
+    TargetPos = 0;
+  }
+}
 
 void loop() {
   while (!pnpFile.available()) { // nothing to read
@@ -323,28 +370,12 @@ void G1Y(long pulseCount){
   }; // wait for move complate
   
 
-
   CurPos = 0;
   TargetPos = 0;
   
 }
 
-void Home(float distance, float Speed){
-  yFindZero = true;
-  setMotorSpeed(Speed);
-  git(distance);  
-}
 
-
-
-void yHomeReached(){ //Interrupt function
-  if(yFindZero) {
-    yFindZero = false;
-    Status = ARRIVED;
-    CurPos = 0;
-    TargetPos = 0;
-  }
-}
 
 
 // Called 800 times per second when y speed is 120 rpm
