@@ -81,9 +81,10 @@ char bufferZ [20];
 
 //length of y axis
 #define MAX_Y_LENGTH 250
-#define CENTER_Y_OFFSET 45600
 
-#define SEARCH_HOME_SWITCH_SPEED 4000
+#define CENTER_Y_OFFSET 37800
+
+#define SEARCH_HOME_SWITCH_SPEED 3800
 #define SLOW_HOMING_SPEED 500
 
 // homing trigered flag
