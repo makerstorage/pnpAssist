@@ -84,6 +84,8 @@ char bufferZ [20];
 
 #define CENTER_Y_OFFSET 37800
 
+#define AXIS_OFFSET 22 // where your 0,0 away from both axis
+
 #define SEARCH_HOME_SWITCH_SPEED 3800
 #define SLOW_HOMING_SPEED 500
 
@@ -116,7 +118,7 @@ int lastStepPulse   = LOW;
 float mAngle = 0; //in degrees
 float mRadius = 0; 
 float eskiAngle = 90; // starting angle is 90
-float eskiRadius = 0;
+float eskiRadius = 0; // offsets are 22   so sqr(22*22+22*22) = 31.113;
 
 void waitForButton(){ 
   int val = digitalRead(NEXT_BUTTON_PIN);
@@ -159,8 +161,8 @@ void git(float y){
 }
 
 void gonder(){
-  
-      CalcAngleRadius(atof(field[1]),atof(field[2])); //x,y
+      
+      CalcAngleRadius((atof(field[1])-AXIS_OFFSET),(atof(field[2])-AXIS_OFFSET)); //x,y
       float mydon = eskiAngle - mAngle;
       don(mydon);
       float mygit = mRadius - eskiRadius;
@@ -208,15 +210,15 @@ void setup() {
               delay(100);
               
               // homing Rotary Axis 
-              HomePolar(365, SEARCH_HOME_SWITCH_SPEED);
+              HomePolar(-365, SEARCH_HOME_SWITCH_SPEED); // negative because it indicate the direction where to rotate
               delay(100);
 
               // turn back alittle
-              don (-20);
+              don (20);
               delay(100);
 
               // seach home slowly
-              HomePolar(100, SLOW_HOMING_SPEED);
+              HomePolar(-100, SLOW_HOMING_SPEED);
               delay(100);
 
             
@@ -225,10 +227,16 @@ void setup() {
               G1Y(CENTER_Y_OFFSET); // goto center
 
                // Set Angle to 0
-              don (45);
+              don (-45);
               delay(100);
 
               // we are all at home :)
+              // init to 0
+
+     //        mAngle = 0; //in degrees
+     //        mRadius = 0; 
+    //         eskiAngle = 0; // starting angle is 45
+    //         eskiRadius = 0; // offsets are 22 for both x and y  so sqr(22*22+22*22) = 31.113;
 
               
 
@@ -264,17 +272,6 @@ void setup() {
 
   oledPrint();
 
-/*
-  //read first line to get the PCB_width
-  fileLine = pnpFile.readStringUntil('\n');
-  parseCommand(fileLine+" ");
-  // field[0] width
-  // field[1] value
-  
-  if(String(field[0]) == "width") {
-    Pcb_width = atof(field[1]);
-  }
-*/
 
 }//setup
 
@@ -329,7 +326,7 @@ void loop() {
 
 void G1X(long pulseCount){
   //X rotation axis and must turn oposite directions
-  if (pulseCount < 0) { //direction
+  if (pulseCount > 0) { //direction
     digitalWrite(A_DIR, HIGH);
     digitalWrite(B_DIR, LOW);
   }else {
