@@ -82,7 +82,7 @@ char bufferZ [20];
 //length of y axis
 #define MAX_Y_LENGTH 250
 
-#define CENTER_Y_OFFSET 37800
+#define CENTER_Y_OFFSET 38200
 
 #define AXIS_OFFSET 22 // where your 0,0 away from both axis
 
