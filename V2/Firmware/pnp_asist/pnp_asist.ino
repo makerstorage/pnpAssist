@@ -134,9 +134,10 @@ void waitForButton(){
   
   while(!digitalRead(NEXT_BUTTON_PIN)) {
    // val = digitalRead(NEXT_BUTTON_PIN);
+   delay(10); 
   }
   
-  //delay(10);  
+  delay(10);  
 }
 
 
