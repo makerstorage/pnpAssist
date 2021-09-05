@@ -66,7 +66,7 @@ char bufferZ [20];
 
 
 //#define SPEED 2000
-#define StepPerMM 160 
+#define StepPerMM 80 
 
 
 //Result  Resolution  Teeth Step angle  Stepping  Belt
@@ -87,7 +87,8 @@ char bufferZ [20];
 //length of y axis
 //#define MAX_Y_LENGTH 250
 
-#define CENTER_Y_OFFSET 5020
+//#define CENTER_Y_OFFSET 5020
+#define CENTER_Y_OFFSET 2510
 
 #define AXIS_OFFSET 30 // where your 0,0 away from both axis v2
 
@@ -109,7 +110,8 @@ const byte yHomePin = 2;
 
 
 // Stepper speeds in RPM
-int iDriveSpeed = 400;
+//int iDriveSpeed = 400;
+int iDriveSpeed = 300;
 
 volatile long CurPos         = 0;
 volatile long TargetPos      = 0;
@@ -193,7 +195,6 @@ void setup() {
 
   pinMode(yHomePin, INPUT);
   attachInterrupt(digitalPinToInterrupt(yHomePin), HomeSwitchReached, RISING);
-
 
 
 
