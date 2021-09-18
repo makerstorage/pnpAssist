@@ -3265,12 +3265,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="202,1,68.58,-63.5,DIS1,D0,,,,"/>
-<approved hash="202,1,71.12,-63.5,DIS1,D1,,,,"/>
-<approved hash="202,1,73.66,-63.5,DIS1,D2,,,,"/>
-<approved hash="202,1,76.2,-63.5,DIS1,D3,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>

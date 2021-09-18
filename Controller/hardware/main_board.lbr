@@ -2113,6 +2113,54 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="C1.0UF_0805" prefix="C" uservalue="yes">
+<description>&lt;b&gt;Capacitor&lt;/b&gt;
+Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
+<gates>
+<gate name="G$1" symbol="SPARKFUN_CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0805" package="SPARKFUN_0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MFR" value="Samsung Electro-Mechanics" constant="no"/>
+<attribute name="MFR_PN" value="CL21B105KOFNNNG" constant="no"/>
+<attribute name="VALUE" value="1.0uF" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="1276-6471-1-ND" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="C2.2UF_0805" prefix="C" uservalue="yes">
+<description>&lt;b&gt;Capacitor&lt;/b&gt;
+Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
+<gates>
+<gate name="G$1" symbol="SPARKFUN_CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0805" package="SPARKFUN_0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MFR" value="Samsung Electro-Mechanics" constant="no"/>
+<attribute name="MFR_PN" value="CL21B225KPFNNNE" constant="no"/>
+<attribute name="VALUE" value="2.2uF" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="1276-1188-1-ND" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>

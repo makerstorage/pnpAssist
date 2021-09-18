@@ -1544,7 +1544,10 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="POPULARITY" value="0" constant="no"/>
+<attribute name="MFR" value=" Yuandi" constant="no"/>
+<attribute name="MFR_PN" value="TC-5610D1-T " constant="no"/>
+<attribute name="VENDOR" value="lcsc electronics" constant="no"/>
+<attribute name="VENDOR_PN" value="C504863" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1986,7 +1989,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="C14" library="main_board" deviceset="C0.1UF_0805" device="0805" value="0.1uF"/>
 <part name="P+18" library="main_board" deviceset="VCC" device=""/>
 <part name="R9" library="main_board" deviceset="R2.2K_0805" device="R0805" value="2.2k"/>
-<part name="12V" library="main_board" deviceset="LED_RED_0805" device="0805"/>
+<part name="12V" library="main_board" deviceset="LED_RED_0805" device="0805" value="12v"/>
 <part name="P+17" library="main_board" deviceset="+12V" device=""/>
 <part name="C8" library="main_board" deviceset="C0.1UF_0805" device="0805" value="0.1uF"/>
 <part name="GND4" library="main_board" deviceset="GND" device=""/>
@@ -3265,12 +3268,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="202,1,68.58,-63.5,DIS1,D0,,,,"/>
-<approved hash="202,1,71.12,-63.5,DIS1,D1,,,,"/>
-<approved hash="202,1,73.66,-63.5,DIS1,D2,,,,"/>
-<approved hash="202,1,76.2,-63.5,DIS1,D3,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>
