@@ -579,18 +579,6 @@ package type OT</description>
 <pad name="2" x="0" y="0" drill="0.8128"/>
 <text x="-2" y="-3.5" size="1.27" layer="25">&gt;NAME</text>
 </package>
-<package name="JST_EPH_B4B-PH-K-S">
-<wire x1="-5" y1="-2" x2="5" y2="-2" width="0.127" layer="21"/>
-<wire x1="5" y1="-2" x2="5" y2="2.5" width="0.127" layer="21"/>
-<wire x1="-5" y1="-2" x2="-5" y2="2.5" width="0.127" layer="21"/>
-<wire x1="-5" y1="2.5" x2="5" y2="2.5" width="0.127" layer="21"/>
-<rectangle x1="-0.5" y1="-2" x2="0.5" y2="-1.5" layer="21"/>
-<pad name="1" x="3" y="0" drill="0.8128" shape="square"/>
-<pad name="2" x="1" y="0" drill="0.8128"/>
-<pad name="3" x="-1" y="0" drill="0.8128"/>
-<pad name="4" x="-3" y="0" drill="0.8128"/>
-<text x="-5" y="-3.5" size="1.27" layer="25">&gt;NAME</text>
-</package>
 <package name="ADAFRUIT_R0805">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
 chip</description>
@@ -852,7 +840,7 @@ Variant with I2C interface</description>
 <rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
 <rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
 <rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
-<pad name="1" x="-2.54" y="0" drill="1.016" rot="R90"/>
+<pad name="1" x="-2.54" y="0" drill="1.016" shape="square" rot="R90"/>
 <pad name="2" x="0" y="0" drill="1.016" rot="R90"/>
 <pad name="3" x="2.54" y="0" drill="1.016" rot="R90"/>
 <text x="-3.8862" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
@@ -866,6 +854,7 @@ Variant with I2C interface</description>
 <wire x1="4.445" y1="-1.27" x2="3.81" y2="-0.635" width="0.1524" layer="21"/>
 <rectangle x1="4.826" y1="-0.254" x2="5.334" y2="0.254" layer="51"/>
 <pad name="4" x="5.08" y="0" drill="1.016" rot="R90"/>
+<circle x="-3.937" y="-1.27" radius="0.127" width="0.254" layer="21"/>
 </package>
 </packages>
 </library>
@@ -1330,9 +1319,6 @@ design rules under a new name.</description>
 <attribute name="VENDOR" value="digikey" x="48" y="54" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VENDOR_PN" value="1189-1148-ND" x="48" y="54" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="MOTOR-B" library="main_board" package="JST_EPH_B4B-PH-K-S" value="JST_EPH_4PIN" x="57.4" y="55" smashed="yes" rot="R180">
-<attribute name="NAME" x="61.4" y="58.5" size="1.016" layer="25" rot="R180"/>
-</element>
 <element name="J1" library="main_board" package="JUMPER_05C" value="" x="35" y="2" smashed="yes">
 <attribute name="MFR" value=" Yuandi" x="35" y="2" size="1.778" layer="27" display="off"/>
 <attribute name="MFR_PN" value="TC-5610D1-T " x="35" y="2" size="1.778" layer="27" display="off"/>
@@ -1398,9 +1384,9 @@ design rules under a new name.</description>
 <attribute name="NAME" x="11.9138" y="56.2288" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="11.99" y="51.225" size="1.27" layer="27"/>
 </element>
-<element name="JP3" library="main_board" package="1X04" value="" x="-5" y="-20" smashed="yes">
-<attribute name="NAME" x="-8.8862" y="-18.1712" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="-8.81" y="-23.175" size="1.27" layer="27"/>
+<element name="MOTOR-B" library="main_board" package="1X04" value="" x="56.6" y="54.4" smashed="yes">
+<attribute name="NAME" x="52.7138" y="56.2288" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="52.79" y="51.225" size="1.27" layer="27"/>
 </element>
 </elements>
 <signals>
@@ -2201,38 +2187,26 @@ design rules under a new name.</description>
 <signal name="N$17" class="1">
 <contactref element="IC_B_MOTOR" pad="14"/>
 <contactref element="MOTOR-B" pad="1"/>
-<wire x1="54.42115" y1="53.05645" x2="54.42115" y2="54.93095" width="1.016" layer="1"/>
-<wire x1="59.19" y1="48.35" x2="59.1276" y2="48.35" width="1.016" layer="1"/>
-<wire x1="59.1276" y1="48.35" x2="54.42115" y2="53.05645" width="1.016" layer="1"/>
-<wire x1="54.42115" y1="54.93095" x2="54.4" y2="55" width="0.6096" layer="1"/>
+<wire x1="59.19" y1="48.35" x2="54.06" y2="53.48" width="1.016" layer="1"/>
+<wire x1="54.06" y1="53.48" x2="54.06" y2="54.4" width="1.016" layer="1"/>
 </signal>
 <signal name="N$18" class="1">
 <contactref element="IC_B_MOTOR" pad="13"/>
 <contactref element="MOTOR-B" pad="2"/>
-<wire x1="61.6858" y1="48.4408" x2="56.46035" y2="53.66625" width="1.016" layer="1"/>
-<wire x1="56.46035" y1="53.66625" x2="56.46035" y2="54.93095" width="1.016" layer="1"/>
-<wire x1="61.6858" y1="48.431" x2="61.6858" y2="48.4408" width="1.016" layer="1"/>
-<wire x1="56.46035" y1="54.93095" x2="56.4" y2="55" width="1.016" layer="1"/>
-<wire x1="61.6858" y1="48.431" x2="61.73" y2="48.35" width="1.016" layer="1"/>
+<wire x1="61.73" y1="48.35" x2="56.6" y2="53.48" width="1.016" layer="1"/>
+<wire x1="56.6" y1="53.48" x2="56.6" y2="54.4" width="1.016" layer="1"/>
 </signal>
 <signal name="N$19" class="1">
 <contactref element="IC_B_MOTOR" pad="12"/>
 <contactref element="MOTOR-B" pad="3"/>
-<wire x1="58.3721" y1="54.2035" x2="58.3721" y2="54.93095" width="1.016" layer="1"/>
-<wire x1="64.2256" y1="48.35" x2="63.7878" y2="48.7878" width="1.016" layer="1"/>
-<wire x1="63.7878" y1="48.7878" x2="58.3721" y2="54.2035" width="1.016" layer="1"/>
-<wire x1="63.7878" y1="48.7878" x2="63.8322" y2="48.7878" width="1.016" layer="1"/>
-<wire x1="63.8322" y1="48.7878" x2="64.27" y2="48.35" width="1.016" layer="1"/>
-<wire x1="58.4" y1="55" x2="58.3721" y2="54.9721" width="1.016" layer="1"/>
-<wire x1="58.3721" y1="54.9721" x2="58.3721" y2="54.93095" width="1.016" layer="1"/>
+<wire x1="64.27" y1="48.35" x2="59.14" y2="53.48" width="1.016" layer="1"/>
+<wire x1="59.14" y1="53.48" x2="59.14" y2="54.4" width="1.016" layer="1"/>
 </signal>
 <signal name="N$21" class="1">
 <contactref element="IC_B_MOTOR" pad="11"/>
 <contactref element="MOTOR-B" pad="4"/>
-<wire x1="66.7838" y1="48.5408" x2="60.4" y2="54.9246" width="1.016" layer="1"/>
-<wire x1="60.4" y1="55" x2="60.4" y2="54.9246" width="1.016" layer="1"/>
-<wire x1="66.7838" y1="48.431" x2="66.7838" y2="48.5408" width="1.016" layer="1"/>
-<wire x1="66.7838" y1="48.431" x2="66.81" y2="48.35" width="1.016" layer="1"/>
+<wire x1="66.81" y1="48.35" x2="61.68" y2="53.48" width="1.016" layer="1"/>
+<wire x1="61.68" y1="53.48" x2="61.68" y2="54.4" width="1.016" layer="1"/>
 </signal>
 <signal name="N$22">
 <contactref element="U1" pad="1"/>
