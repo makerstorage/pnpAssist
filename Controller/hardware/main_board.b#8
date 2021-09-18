@@ -1305,7 +1305,7 @@ design rules under a new name.</description>
 <element name="C9" library="main_board" package="RCL_E3,5-8" value="100uF" x="27" y="54" smashed="yes" rot="R90">
 <attribute name="MFR_PN" value="16ZLH100MEFC5X11" x="27" y="54" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MNF" value="rubycon" x="27" y="54" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="31.606" y="50.102" size="1.016" layer="25" ratio="10" rot="R90"/>
+<attribute name="NAME" x="27.798" y="58.306" size="1.016" layer="25" ratio="10" rot="R180"/>
 <attribute name="VALUE" value="100uF" x="30.048" y="51.714" size="1.016" layer="27" ratio="10" rot="R90"/>
 <attribute name="VENDOR" value="digikey" x="27" y="54" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VENDOR_PN" value="1189-1148-ND" x="27" y="54" size="1.778" layer="27" rot="R90" display="off"/>
@@ -1313,7 +1313,7 @@ design rules under a new name.</description>
 <element name="C10" library="main_board" package="RCL_E3,5-8" value="100uF" x="48" y="54" smashed="yes" rot="R90">
 <attribute name="MFR_PN" value="16ZLH100MEFC5X11" x="48" y="54" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MNF" value="rubycon" x="48" y="54" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="44.106" y="49.802" size="1.016" layer="25" ratio="10" rot="R90"/>
+<attribute name="NAME" x="49.098" y="58.306" size="1.016" layer="25" ratio="10" rot="R180"/>
 <attribute name="VALUE" value="100uF" x="51.048" y="51.714" size="1.016" layer="27" ratio="10" rot="R90"/>
 <attribute name="VENDOR" value="digikey" x="48" y="54" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VENDOR_PN" value="1189-1148-ND" x="48" y="54" size="1.778" layer="27" rot="R90" display="off"/>

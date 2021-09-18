@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="39.3700787" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="3.93700787" altunitdist="mil" altunit="mil"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -195,6 +195,10 @@
 <circle x="5.02" y="54.05" radius="1.5" width="0.001" layer="20"/>
 <circle x="5.02" y="4.05" radius="1.5" width="0.001" layer="20"/>
 <circle x="70.02" y="54.05" radius="1.5" width="0.001" layer="20"/>
+<circle x="5" y="4" radius="3.5" width="0.1524" layer="21"/>
+<circle x="70" y="4" radius="3.5" width="0.1524" layer="21"/>
+<circle x="70" y="54" radius="3.5" width="0.1524" layer="21"/>
+<circle x="5" y="54" radius="3.5" width="0.1524" layer="21"/>
 </plain>
 <libraries>
 <library name="main_board">
