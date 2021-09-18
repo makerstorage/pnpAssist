@@ -865,7 +865,7 @@ grid 3.5 mm, diameter 8 mm</description>
 <circle x="0" y="0" radius="3" width="0.1524" layer="21"/>
 <wire x1="-1.778" y1="1.397" x2="-1.016" y2="1.397" width="0.1524" layer="21"/>
 <wire x1="-1.397" y1="1.016" x2="-1.397" y2="1.778" width="0.1524" layer="21"/>
-<wire x1="-0.762" y1="-1.27" x2="-0.254" y2="-1.27" width="0.1524" layer="51"/>
+<wire x1="1.778" y1="-1.27" x2="2.286" y2="-1.27" width="0.1524" layer="51"/>
 <pad name="+" x="-1" y="0" drill="0.75"/>
 <pad name="-" x="1" y="0" drill="0.75" shape="octagon"/>
 <text x="-3.048" y="2.794" size="1.27" layer="25" ratio="10">&gt;NAME</text>

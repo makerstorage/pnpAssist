@@ -1106,21 +1106,6 @@ Variant with I2C interface</description>
 <text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
 <text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
-<symbol name="SPARKFUN_RESISTOR">
-<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.1524" layer="94"/>
-<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.1524" layer="94"/>
-<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.1524" layer="94"/>
-<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.1524" layer="94"/>
-<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
-<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
-<text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
 <symbol name="JUMPER_SJ">
 <wire x1="0.381" y1="0.635" x2="0.381" y2="-0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
 <wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
@@ -1335,29 +1320,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="100UF_EC" prefix="C" uservalue="yes">
-<description>&lt;B&gt;POLARIZED CAPACITOR&lt;/B&gt;, European symbol</description>
-<gates>
-<gate name="G$1" symbol="RCL_CPOL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="E3.5-8" package="RCL_E3,5-8">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MFR_PN" value="16ZLH100MEFC5X11" constant="no"/>
-<attribute name="MNF" value="rubycon" constant="no"/>
-<attribute name="VALUE" value="100uF" constant="no"/>
-<attribute name="VENDOR" value="digikey" constant="no"/>
-<attribute name="VENDOR_PN" value="1189-1148-ND" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="GND" prefix="GND">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
@@ -1372,10 +1334,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </devices>
 </deviceset>
 <deviceset name="LINEAR_78*" prefix="IC">
-<description>Positive &lt;b&gt;VOLTAGE REGULATOR&lt;/b&gt;&lt;p&gt;
-Source:&lt;br&gt;
-http://cache.national.com/ds/LM/LM78L05.pdf&lt;br&gt;
-http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
+<description>IC REG LINEAR 5V 1A TO252-3</description>
 <gates>
 <gate name="A1" symbol="LINEAR_78XX" x="0" y="0"/>
 </gates>
@@ -1387,22 +1346,12 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <connect gate="A1" pin="VO" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
-<technology name="05"/>
-<technology name="06"/>
-<technology name="08"/>
-<technology name="12"/>
-<technology name="15"/>
-<technology name="18"/>
-<technology name="24"/>
-<technology name="6"/>
-<technology name="8"/>
-<technology name="L05"/>
-<technology name="L08"/>
-<technology name="L12"/>
-<technology name="L15"/>
-<technology name="L18"/>
-<technology name="L24"/>
+<technology name="">
+<attribute name="MFR" value="Rohm Semiconductor" constant="no"/>
+<attribute name="MFR_PN" value="BA17805FP-E2" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="BA17805FP-E2CT-ND" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -1437,7 +1386,12 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <connect gate="P" pin="VSS" pad="8"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="toshiba" constant="no"/>
+<attribute name="MFR_PN" value="74HC4050D" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="74HC4050DCT-ND" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -1573,7 +1527,12 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <connect gate="G$1" pin="VMOT" pad="16"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="Pololu" constant="no"/>
+<attribute name="MFR_PN" value="2133" constant="no"/>
+<attribute name="VENDOR" value="Pololu" constant="no"/>
+<attribute name="VENDOR_PN" value="2133" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -1688,7 +1647,12 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="IQD Frequency Products" constant="no"/>
+<attribute name="MFR_PN" value="LFXTAL003240BULK" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="1923-1433-ND" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -1785,24 +1749,6 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SPARKFUN_RESISTOR" prefix="R" uservalue="yes">
-<description>&lt;b&gt;Resistor&lt;/b&gt;
-Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (small) resistors.</description>
-<gates>
-<gate name="G$1" symbol="SPARKFUN_RESISTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SPARKFUN_0805">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="JUMPER_SJ" prefix="SJ" uservalue="yes">
 <description>SMD solder &lt;b&gt;JUMPER&lt;/b&gt;</description>
 <gates>
@@ -1816,7 +1762,10 @@ Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (sma
 </connects>
 <technologies>
 <technology name="">
-<attribute name="POPULARITY" value="3" constant="no"/>
+<attribute name="MFR" value="n/a" constant="no"/>
+<attribute name="MFR_PN" value="n/a" constant="no"/>
+<attribute name="VENDOR" value="n/a" constant="no"/>
+<attribute name="VENDOR_PN" value="n/a" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1869,7 +1818,12 @@ Variant with &lt;b&gt;I2C interface&lt;/b&gt;
 <connect gate="G$1" pin="VCC" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="adafruit" constant="no"/>
+<attribute name="MFR_PN" value="326" constant="no"/>
+<attribute name="VENDOR" value="adafruit" constant="no"/>
+<attribute name="VENDOR_PN" value="326" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -1922,7 +1876,12 @@ push-push type</description>
 <connect gate="-2" pin="1" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="Phoenix Contact" constant="no"/>
+<attribute name="MFR_PN" value="1734656" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="277-1979-ND" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -2022,7 +1981,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <parts>
 <part name="IC5" library="main_board" deviceset="ATMEGA328P" device="" value="ATMEGA328"/>
 <part name="P+2" library="main_board" deviceset="VCC" device=""/>
-<part name="R7" library="main_board" deviceset="SPARKFUN_RESISTOR" device="" value="10K"/>
+<part name="R7" library="main_board" deviceset="R10K_0805" device="R0805" value="10k"/>
 <part name="C12" library="main_board" deviceset="C16PF_0805" device="0805" value="16pF"/>
 <part name="C13" library="main_board" deviceset="C16PF_0805" device="0805" value="16pF"/>
 <part name="GND3" library="main_board" deviceset="GND" device=""/>
@@ -2044,7 +2003,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="P+5" library="main_board" deviceset="+12V" device=""/>
 <part name="C3" library="main_board" deviceset="C0.1UF_0805" device="0805" value="0.1uF"/>
 <part name="C5" library="main_board" deviceset="C0.1UF_0805" device="0805" value="0.1uF"/>
-<part name="IC1" library="main_board" deviceset="LINEAR_78*" device="DT" technology="05" value="LINEAR_7805DT"/>
+<part name="IC1" library="main_board" deviceset="LINEAR_78*" device="DT" value="LINEAR_78DT"/>
 <part name="P+15" library="main_board" deviceset="VCC" device=""/>
 <part name="C6" library="main_board" deviceset="C100UF_EC" device="E3.5-8" value="100uF"/>
 <part name="C7" library="main_board" deviceset="C100UF_EC" device="E3.5-8" value="100uF"/>
@@ -2097,8 +2056,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="SJ6" library="main_board" deviceset="JUMPER_SJ" device=""/>
 <part name="P+20" library="main_board" deviceset="VCC" device=""/>
 <part name="P+21" library="main_board" deviceset="VCC" device=""/>
-<part name="C9" library="main_board" deviceset="100UF_EC" device="E3.5-8" value="100uF"/>
-<part name="C10" library="main_board" deviceset="100UF_EC" device="E3.5-8" value="100uF"/>
+<part name="C9" library="main_board" deviceset="C100UF_EC" device="E3.5-8" value="100uF"/>
+<part name="C10" library="main_board" deviceset="C100UF_EC" device="E3.5-8" value="100uF"/>
 <part name="MOTOR-A" library="main_board" deviceset="JST_EPH_4PIN" device=""/>
 <part name="MOTOR-B" library="main_board" deviceset="JST_EPH_4PIN" device=""/>
 <part name="J1" library="main_board" deviceset="JUMPER_J2" device="X5MM"/>

@@ -1544,7 +1544,10 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="POPULARITY" value="0" constant="no"/>
+<attribute name="MFR" value=" Yuandi" constant="no"/>
+<attribute name="MFR_PN" value="TC-5610D1-T " constant="no"/>
+<attribute name="VENDOR" value="lcsc electronics" constant="no"/>
+<attribute name="VENDOR_PN" value="C504863" constant="no"/>
 </technology>
 </technologies>
 </device>
