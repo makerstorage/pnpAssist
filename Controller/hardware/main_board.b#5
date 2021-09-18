@@ -1057,7 +1057,7 @@ design rules under a new name.</description>
 <element name="C3" library="main_board" package="SPARKFUN_0805" value="0.1uF" x="52.09" y="6.78" smashed="yes" rot="R180">
 <attribute name="MFR" value="Samsung Electro-Mechanics" x="52.09" y="6.78" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MFR_PN" value="CL21B104KBCNFNC" x="52.09" y="6.78" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="53.748" y="6.4455" size="1.016" layer="25"/>
+<attribute name="NAME" x="53.252" y="5.5545" size="1.016" layer="25" rot="R180"/>
 <attribute name="VALUE" x="53.106" y="8.177" size="0.4064" layer="27" rot="R180"/>
 <attribute name="VENDOR" value="digikey" x="52.09" y="6.78" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VENDOR_PN" value="1276-2444-1-ND" x="52.09" y="6.78" size="1.778" layer="27" rot="R180" display="off"/>
@@ -1339,6 +1339,22 @@ design rules under a new name.</description>
 <attribute name="VENDOR" value="digikey" x="48.4" y="24.6" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VENDOR_PN" value="1276-2444-1-ND" x="48.4" y="24.6" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
+<element name="C13" library="main_board" package="SPARKFUN_0805" value="2.2uF" x="22" y="11" smashed="yes" rot="R180">
+<attribute name="MFR" value="Samsung Electro-Mechanics" x="22" y="11" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MFR_PN" value="CL21B225KPFNNNE" x="22" y="11" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="20.838" y="12.0255" size="1.016" layer="25"/>
+<attribute name="VALUE" x="23.016" y="12.397" size="0.4064" layer="27" rot="R180"/>
+<attribute name="VENDOR" value="digikey" x="22" y="11" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VENDOR_PN" value="1276-1188-1-ND" x="22" y="11" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="C15" library="main_board" package="SPARKFUN_0805" value="1.0uF" x="22" y="4" smashed="yes">
+<attribute name="MFR" value="Samsung Electro-Mechanics" x="22" y="4" size="1.778" layer="27" display="off"/>
+<attribute name="MFR_PN" value="CL21B105KOFNNNG" x="22" y="4" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="23.162" y="3.1745" size="1.016" layer="25" rot="R180"/>
+<attribute name="VALUE" x="20.984" y="2.603" size="0.4064" layer="27"/>
+<attribute name="VENDOR" value="digikey" x="22" y="4" size="1.778" layer="27" display="off"/>
+<attribute name="VENDOR_PN" value="1276-6471-1-ND" x="22" y="4" size="1.778" layer="27" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="+12V" class="1">
@@ -1451,6 +1467,8 @@ design rules under a new name.</description>
 <contactref element="C14" pad="1"/>
 <via x="19" y="18" extent="1-16" drill="0.35"/>
 <via x="19.1" y="26.2" extent="1-16" drill="0.35"/>
+<contactref element="C15" pad="2"/>
+<contactref element="C13" pad="1"/>
 </signal>
 <signal name="RX">
 <contactref element="IC5" pad="30"/>
@@ -1718,7 +1736,6 @@ design rules under a new name.</description>
 <contactref element="R3" pad="2"/>
 <wire x1="71.6269" y1="31.48015" x2="71.6269" y2="30" width="0.3048" layer="1"/>
 <wire x1="71.6269" y1="30" x2="71.6269" y2="27.0194" width="0.3048" layer="1"/>
-<wire x1="71.8818" y1="26.7645" x2="71.71515" y2="26.93115" width="0.3048" layer="1"/>
 <wire x1="71.6269" y1="31.48015" x2="71.63" y2="31.52" width="0.3048" layer="1"/>
 <wire x1="42.95065" y1="32.8821" x2="41.8036" y2="32.8821" width="0.3048" layer="1"/>
 <wire x1="43.0781" y1="32.75465" x2="42.95065" y2="32.8821" width="0.3048" layer="1"/>
@@ -1726,7 +1743,6 @@ design rules under a new name.</description>
 <wire x1="62.9603" y1="26.89195" x2="57.0976" y2="32.75465" width="0.3048" layer="16"/>
 <wire x1="63.08775" y1="26.7645" x2="62.9603" y2="26.89195" width="0.3048" layer="1"/>
 <wire x1="41.8036" y1="32.8821" x2="41.7926" y2="32.99" width="0.3048" layer="1"/>
-<wire x1="71.5485" y1="26.7645" x2="71.71515" y2="26.93115" width="0.3048" layer="1"/>
 <via x="43.0781" y="32.75465" extent="1-16" drill="0.3"/>
 <via x="62.9603" y="26.89195" extent="1-16" drill="0.3"/>
 <wire x1="71.6269" y1="27.0194" x2="71.71515" y2="26.93115" width="0.3048" layer="1"/>
@@ -1896,6 +1912,9 @@ design rules under a new name.</description>
 <wire x1="49.81" y1="19.2" x2="57.28" y2="19.2" width="0.3048" layer="16"/>
 <wire x1="40.5" y1="10.75" x2="40.5" y2="15.05" width="0.3048" layer="1"/>
 <wire x1="40.5" y1="15.05" x2="40.05" y2="15.5" width="0.3048" layer="1"/>
+<contactref element="C15" pad="1"/>
+<wire x1="21.01" y1="6.6" x2="21.01" y2="4.09" width="0.3048" layer="1"/>
+<wire x1="21.01" y1="4.09" x2="21.1" y2="4" width="0.3048" layer="1"/>
 </signal>
 <signal name="A3">
 <contactref element="IC5" pad="26"/>
@@ -2018,9 +2037,12 @@ design rules under a new name.</description>
 <wire x1="20.02" y1="22.88" x2="21" y2="21.9" width="0.3048" layer="1"/>
 <wire x1="21" y1="9.21" x2="21.01" y2="9.2" width="0.3048" layer="1"/>
 <wire x1="21" y1="21.9" x2="21" y2="12" width="0.3048" layer="1"/>
-<wire x1="21" y1="12" x2="21" y2="9.21" width="0.3048" layer="1"/>
+<wire x1="21" y1="12" x2="21" y2="11" width="0.3048" layer="1"/>
+<wire x1="21" y1="11" x2="21" y2="9.21" width="0.3048" layer="1"/>
 <wire x1="19.515" y1="11.6734" x2="19.8416" y2="12" width="0.3048" layer="1"/>
 <wire x1="19.8416" y1="12" x2="21" y2="12" width="0.3048" layer="1"/>
+<contactref element="C13" pad="2"/>
+<wire x1="21.1" y1="11" x2="21" y2="11" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$4">
 <contactref element="ACT" pad="C"/>
