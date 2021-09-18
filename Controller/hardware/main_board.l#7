@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -862,14 +862,21 @@ TS-003</description>
 <package name="RCL_E3,5-8">
 <description>&lt;b&gt;ELECTROLYTIC CAPACITOR&lt;/b&gt;&lt;p&gt;
 grid 3.5 mm, diameter 8 mm</description>
-<circle x="0" y="0" radius="3" width="0.1524" layer="21"/>
-<wire x1="-1.778" y1="1.397" x2="-1.016" y2="1.397" width="0.1524" layer="21"/>
-<wire x1="-1.397" y1="1.016" x2="-1.397" y2="1.778" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="4.064" width="0.1524" layer="21"/>
+<wire x1="-3.429" y1="1.143" x2="-2.667" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="-3.048" y1="0.762" x2="-3.048" y2="1.524" width="0.1524" layer="21"/>
+<wire x1="-1.651" y1="0" x2="-0.762" y2="0" width="0.1524" layer="51"/>
+<wire x1="-0.762" y1="0" x2="-0.762" y2="-1.27" width="0.1524" layer="51"/>
 <wire x1="-0.762" y1="-1.27" x2="-0.254" y2="-1.27" width="0.1524" layer="51"/>
-<pad name="+" x="-1" y="0" drill="0.75"/>
-<pad name="-" x="1" y="0" drill="0.75" shape="octagon"/>
-<text x="-3.048" y="2.794" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.286" y="-4.318" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<wire x1="-0.254" y1="-1.27" x2="-0.254" y2="1.27" width="0.1524" layer="51"/>
+<wire x1="-0.254" y1="1.27" x2="-0.762" y2="1.27" width="0.1524" layer="51"/>
+<wire x1="-0.762" y1="1.27" x2="-0.762" y2="0" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="0" x2="1.651" y2="0" width="0.1524" layer="51"/>
+<rectangle x1="0.254" y1="-1.27" x2="0.762" y2="1.27" layer="51"/>
+<pad name="+" x="-1.778" y="0" drill="0.8128" diameter="1.6002"/>
+<pad name="-" x="1.778" y="0" drill="0.8128" diameter="1.6002" shape="octagon"/>
+<text x="3.302" y="2.794" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.286" y="-3.048" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -1925,11 +1932,11 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFR" value="Stackpole Electronics Inc" constant="no"/>
-<attribute name="MFR_PN" value="RMCF0805FT10K0" constant="no"/>
+<attribute name="MFR" value="" constant="no"/>
+<attribute name="MFR_PN" value="" constant="no"/>
 <attribute name="VALUE" value="10k" constant="no"/>
-<attribute name="VENDOR" value="digikey" constant="no"/>
-<attribute name="VENDOR_PN" value="RMCF0805FT10K0CT-ND" constant="no"/>
+<attribute name="VENDOR" value="" constant="no"/>
+<attribute name="VENDOR_PN" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1948,11 +1955,11 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFR" value="Stackpole Electronics Inc" constant="no"/>
-<attribute name="MFR_PN" value="RMCF0805FT1K00" constant="no"/>
+<attribute name="MFR" value="" constant="no"/>
+<attribute name="MFR_PN" value="" constant="no"/>
 <attribute name="VALUE" value="1.0k" constant="no"/>
-<attribute name="VENDOR" value="digikey" constant="no"/>
-<attribute name="VENDOR_PN" value="RMCF0805FT1K00CT-ND" constant="no"/>
+<attribute name="VENDOR" value="" constant="no"/>
+<attribute name="VENDOR_PN" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1971,11 +1978,11 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFR" value="Panasonic Electronic Components" constant="no"/>
-<attribute name="MFR_PN" value="ERA-6AED222V" constant="no"/>
+<attribute name="MFR" value="" constant="no"/>
+<attribute name="MFR_PN" value="" constant="no"/>
 <attribute name="VALUE" value="2.2k" constant="no"/>
-<attribute name="VENDOR" value="digikey" constant="no"/>
-<attribute name="VENDOR_PN" value="P2.2KBNCT-ND" constant="no"/>
+<attribute name="VENDOR" value="" constant="no"/>
+<attribute name="VENDOR_PN" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1994,11 +2001,11 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFR" value="TE Connectivity Passive Product" constant="no"/>
-<attribute name="MFR_PN" value="CRGCQ0805F330R" constant="no"/>
+<attribute name="MFR" value="" constant="no"/>
+<attribute name="MFR_PN" value="" constant="no"/>
 <attribute name="VALUE" value="330" constant="no"/>
-<attribute name="VENDOR" value="digikey" constant="no"/>
-<attribute name="VENDOR_PN" value="A129743CT-ND" constant="no"/>
+<attribute name="VENDOR" value="" constant="no"/>
+<attribute name="VENDOR_PN" value="" constant="no"/>
 </technology>
 </technologies>
 </device>

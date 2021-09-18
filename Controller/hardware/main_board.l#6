@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mic" unit="mic" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -1369,12 +1369,17 @@ Variant with I2C interface</description>
 <connect gate="P" pin="VSS" pad="8"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="toshiba" constant="no"/>
+<attribute name="MFR_PN" value="74HC4050D" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="74HC4050DCT-ND" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SPARKFUN_ATMEGA168">
+<deviceset name="ATMEGA328P">
 <gates>
 <gate name="G$1" symbol="SPARKFUN_ATMEGA168" x="0" y="0"/>
 </gates>
@@ -1415,30 +1420,17 @@ Variant with I2C interface</description>
 <connect gate="G$1" pin="VCC@2" pad="6"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="microchip" constant="no"/>
+<attribute name="MFR_PN" value="ATMEGA328PB-AU" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="ATMEGA328PB-AU-ND" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SPARKFUN_CAP" prefix="C" uservalue="yes">
-<description>&lt;b&gt;Capacitor&lt;/b&gt;
-Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
-<gates>
-<gate name="G$1" symbol="SPARKFUN_CAP" x="0" y="0"/>
-</gates>
-<devices>
-<device name="0805" package="SPARKFUN_0805">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SPARKFUN_GND" prefix="GND">
+<deviceset name="GND" prefix="GND">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="SPARKFUN_GND" x="0" y="0"/>
@@ -1451,7 +1443,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SPARKFUN_LED" prefix="LED" uservalue="yes">
+<deviceset name="LED_RED_0805" prefix="LED" uservalue="yes">
 <description>&lt;b&gt;LEDs&lt;/b&gt;
 Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. 5mm - Spark Fun Electronics SKU : COM-00529 (and others)</description>
 <gates>
@@ -1464,140 +1456,17 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="Würth Elektronik" constant="no"/>
+<attribute name="MFR_PN" value="150080RS75000" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="732-4984-1-ND" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SPARKFUN_RESISTOR" prefix="R" uservalue="yes">
-<description>&lt;b&gt;Resistor&lt;/b&gt;
-Basic schematic elements and footprints for 0603, 1206, and PTH 1/10th watt (small) resistors.</description>
-<gates>
-<gate name="G$1" symbol="SPARKFUN_RESISTOR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SPARKFUN_0805">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="ADAFRUIT_C-US" prefix="C" uservalue="yes">
-<description>&lt;B&gt;CAPACITOR&lt;/B&gt;, American symbol</description>
-<gates>
-<gate name="G$1" symbol="ADAFRUIT_C-US" x="0" y="0"/>
-</gates>
-<devices>
-<device name="C0805K" package="ADAFRUIT_C0805K">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="ADAFRUIT_CPOL-US" prefix="C" uservalue="yes">
-<description>&lt;B&gt;POLARIZED CAPACITOR&lt;/B&gt;, American symbol</description>
-<gates>
-<gate name="G$1" symbol="ADAFRUIT_CPOL-US" x="0" y="0"/>
-</gates>
-<devices>
-<device name="A/3216-18R" package="ADAFRUIT_A/3216-18R">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="ADAFRUIT_LED" prefix="LED" uservalue="yes">
-<description>&lt;b&gt;LED&lt;/b&gt;&lt;p&gt;
-&lt;u&gt;OSRAM&lt;/u&gt;:&lt;br&gt;
-
-- &lt;u&gt;CHIPLED&lt;/u&gt;&lt;br&gt;
-LG R971, LG N971, LY N971, LG Q971, LY Q971, LO R971, LY R971
-LH N974, LH R974&lt;br&gt;
-LS Q976, LO Q976, LY Q976&lt;br&gt;
-LO Q996&lt;br&gt;
-
-
-- &lt;u&gt;Hyper CHIPLED&lt;/u&gt;&lt;br&gt;
-LW Q18S&lt;br&gt;
-LB Q993, LB Q99A, LB R99A&lt;br&gt;
-
-- &lt;u&gt;SideLED&lt;/u&gt;&lt;br&gt;
-LS A670, LO A670, LY A670, LG A670, LP A670&lt;br&gt;
-LB A673, LV A673, LT A673, LW A673&lt;br&gt;
-LH A674&lt;br&gt;
-LY A675&lt;br&gt;
-LS A676, LA A676, LO A676, LY A676, LW A676&lt;br&gt;
-LS A679, LY A679, LG A679&lt;br&gt;
-
--  &lt;u&gt;Hyper Micro SIDELED®&lt;/u&gt;&lt;br&gt;
-LS Y876, LA Y876, LO Y876, LY Y876&lt;br&gt;
-LT Y87S&lt;br&gt;
-
-- &lt;u&gt;SmartLED&lt;/u&gt;&lt;br&gt;
-LW L88C, LW L88S&lt;br&gt;
-LB L89C, LB L89S, LG L890&lt;br&gt;
-LS L89K, LO L89K, LY L89K&lt;br&gt;
-LS L896, LA L896, LO L896, LY L896&lt;br&gt;
-
-- &lt;u&gt;TOPLED&lt;/u&gt;&lt;br&gt;
-LS T670, LO T670, LY T670, LG T670, LP T670&lt;br&gt;
-LSG T670, LSP T670, LSY T670, LOP T670, LYG T670&lt;br&gt;
-LG T671, LOG T671, LSG T671&lt;br&gt;
-LB T673, LV T673, LT T673, LW T673&lt;br&gt;
-LH T674&lt;br&gt;
-LS T676, LA T676, LO T676, LY T676, LB T676, LH T676, LSB T676, LW T676&lt;br&gt;
-LB T67C, LV T67C, LT T67C, LS T67K, LO T67K, LY T67K, LW E67C&lt;br&gt;
-LS E67B, LA E67B, LO E67B, LY E67B, LB E67C, LV E67C, LT E67C&lt;br&gt;
-LW T67C&lt;br&gt;
-LS T679, LY T679, LG T679&lt;br&gt;
-LS T770, LO T770, LY T770, LG T770, LP T770&lt;br&gt;
-LB T773, LV T773, LT T773, LW T773&lt;br&gt;
-LH T774&lt;br&gt;
-LS E675, LA E675, LY E675, LS T675&lt;br&gt;
-LS T776, LA T776, LO T776, LY T776, LB T776&lt;br&gt;
-LHGB T686&lt;br&gt;
-LT T68C, LB T68C&lt;br&gt;
-
-- &lt;u&gt;Hyper Mini TOPLED®&lt;/u&gt;&lt;br&gt;
-LB M676&lt;br&gt;
-
-- &lt;u&gt;Mini TOPLED Santana®&lt;/u&gt;&lt;br&gt;
-LG M470&lt;br&gt;
-LS M47K, LO M47K, LY M47K&lt;br&gt;
-
-&lt;p&gt;
-Source: http://www.osram.convergy.de/</description>
-<gates>
-<gate name="G$1" symbol="ADAFRUIT_LED" x="0" y="0"/>
-</gates>
-<devices>
-<device name="CHIP-LED0805" package="ADAFRUIT_CHIP-LED0805">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="ADAFRUIT_LP298X" prefix="IC">
+<deviceset name="LP298X" prefix="IC">
 <gates>
 <gate name="G$1" symbol="ADAFRUIT_LP298X" x="-2.54" y="2.54"/>
 </gates>
@@ -1611,12 +1480,17 @@ Source: http://www.osram.convergy.de/</description>
 <connect gate="G$1" pin="VOUT" pad="5"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="texas Instruments" constant="no"/>
+<attribute name="MFR_PN" value="LP2980IM5X-3.3/NOPB " constant="no"/>
+<attribute name="VENDOR" value="mouser" constant="no"/>
+<attribute name="VENDOR_PN" value="926-LP2980IM5X33NOPB " constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="ADAFRUIT_MICROSD">
+<deviceset name="MICROSD_SMD">
 <description>&lt;b&gt;Micro-SD / Transflash card holder with SPI pinout&lt;/b&gt;
 &lt;p&gt;
 For the 3M # 2908-05WB-MG and/or 4UCON #19656&lt;br&gt;
@@ -1641,7 +1515,12 @@ push-push type</description>
 <connect gate="G$1" pin="VSS" pad="6"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="Amphenol ICC (Commercial Products)" constant="no"/>
+<attribute name="MFR_PN" value="GTFP08432B1HR" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="664-GTFP08432B1HRCT-ND" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -1657,43 +1536,6 @@ push-push type</description>
 <connect gate="A" pin="1" pad="1"/>
 <connect gate="A" pin="2" pad="2"/>
 <connect gate="A" pin="3" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="ADAFRUIT_R-US_" prefix="R" uservalue="yes">
-<description>&lt;B&gt;RESISTOR&lt;/B&gt;, American symbol</description>
-<gates>
-<gate name="G$1" symbol="ADAFRUIT_R-US" x="0" y="0"/>
-</gates>
-<devices>
-<device name="R0805" package="ADAFRUIT_R0805">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="ADAFRUIT_SPST_TACT" prefix="SW">
-<description>SMT 6mm switch, EVQQ2 series
-&lt;p&gt;http://www.ladyada.net/library/eagle&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="ADAFRUIT_TS2" x="0" y="0"/>
-</gates>
-<devices>
-<device name="-EVQQ2" package="ADAFRUIT_EVQ-Q2">
-<connects>
-<connect gate="G$1" pin="P" pad="A"/>
-<connect gate="G$1" pin="P1" pad="A'"/>
-<connect gate="G$1" pin="S" pad="B"/>
-<connect gate="G$1" pin="S1" pad="B'"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1735,7 +1577,12 @@ push-push type</description>
 <connect gate="-2" pin="1" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="Phoenix Contact" constant="no"/>
+<attribute name="MFR_PN" value="1734656" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="277-1979-ND" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -1752,7 +1599,12 @@ push-push type</description>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="IQD Frequency Products" constant="no"/>
+<attribute name="MFR_PN" value="LFXTAL003240BULK" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="1923-1433-ND" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -1779,7 +1631,12 @@ Variant with &lt;b&gt;I2C interface&lt;/b&gt;
 <connect gate="G$1" pin="VCC" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="adafruit" constant="no"/>
+<attribute name="MFR_PN" value="326" constant="no"/>
+<attribute name="VENDOR" value="adafruit" constant="no"/>
+<attribute name="VENDOR_PN" value="326" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -1851,17 +1708,17 @@ Variant with &lt;b&gt;I2C interface&lt;/b&gt;
 </connects>
 <technologies>
 <technology name="">
-<attribute name="POPULARITY" value="3" constant="no"/>
+<attribute name="MFR" value="n/a" constant="no"/>
+<attribute name="MFR_PN" value="n/a" constant="no"/>
+<attribute name="VENDOR" value="n/a" constant="no"/>
+<attribute name="VENDOR_PN" value="n/a" constant="no"/>
 </technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
 <deviceset name="LINEAR_78*" prefix="IC">
-<description>Positive &lt;b&gt;VOLTAGE REGULATOR&lt;/b&gt;&lt;p&gt;
-Source:&lt;br&gt;
-http://cache.national.com/ds/LM/LM78L05.pdf&lt;br&gt;
-http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
+<description>IC REG LINEAR 5V 1A TO252-3</description>
 <gates>
 <gate name="A1" symbol="LINEAR_78XX" x="0" y="0"/>
 </gates>
@@ -1873,22 +1730,12 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <connect gate="A1" pin="VO" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
-<technology name="05"/>
-<technology name="06"/>
-<technology name="08"/>
-<technology name="12"/>
-<technology name="15"/>
-<technology name="18"/>
-<technology name="24"/>
-<technology name="6"/>
-<technology name="8"/>
-<technology name="L05"/>
-<technology name="L08"/>
-<technology name="L12"/>
-<technology name="L15"/>
-<technology name="L18"/>
-<technology name="L24"/>
+<technology name="">
+<attribute name="MFR" value="Rohm Semiconductor" constant="no"/>
+<attribute name="MFR_PN" value="BA17805FP-E2" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="BA17805FP-E2CT-ND" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -1928,29 +1775,17 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <connect gate="G$1" pin="VMOT" pad="16"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="Pololu" constant="no"/>
+<attribute name="MFR_PN" value="2133" constant="no"/>
+<attribute name="VENDOR" value="Pololu" constant="no"/>
+<attribute name="VENDOR_PN" value="2133" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="RCL_CPOL-EU" prefix="C" uservalue="yes">
-<description>&lt;B&gt;POLARIZED CAPACITOR&lt;/B&gt;, European symbol</description>
-<gates>
-<gate name="G$1" symbol="RCL_CPOL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="E3.5-8" package="RCL_E3,5-8">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SUPPLY1_+3V3" prefix="+3V3">
+<deviceset name="+3V3" prefix="+3V3">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="SUPPLY1_+3V3" x="0" y="0"/>
@@ -1963,7 +1798,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SUPPLY1_+12V" prefix="P+">
+<deviceset name="+12V" prefix="P+">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="SUPPLY1_+12V" x="0" y="0"/>
@@ -1976,20 +1811,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SUPPLY1_GND" prefix="GND">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="SUPPLY1_GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SUPPLY1_VCC" prefix="P+">
+<deviceset name="VCC" prefix="P+">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="VCC" symbol="SUPPLY1_VCC" x="0" y="0"/>
@@ -2002,15 +1824,214 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SUPPLY2_GND" prefix="SUPPLY">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<deviceset name="C0.1UF_0805" prefix="C" uservalue="yes">
+<description>&lt;b&gt;Capacitor&lt;/b&gt;
+Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <gates>
-<gate name="GND" symbol="SUPPLY2_GND" x="0" y="0"/>
+<gate name="G$1" symbol="SPARKFUN_CAP" x="0" y="0"/>
 </gates>
 <devices>
-<device name="">
+<device name="0805" package="SPARKFUN_0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MFR" value="Samsung Electro-Mechanics" constant="no"/>
+<attribute name="MFR_PN" value="CL21B104KBCNFNC" constant="no"/>
+<attribute name="VALUE" value="0.1uF" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="1276-2444-1-ND" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="C16PF_0805" prefix="C" uservalue="yes">
+<description>&lt;b&gt;Capacitor&lt;/b&gt;
+Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
+<gates>
+<gate name="G$1" symbol="SPARKFUN_CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0805" package="SPARKFUN_0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MFR" value="YAGEO" constant="no"/>
+<attribute name="MFR_PN" value="CC0805JRNPO9BN160" constant="no"/>
+<attribute name="VALUE" value="16pF" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="311-4228-1-ND" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="C100UF_EC" prefix="C" uservalue="yes">
+<description>&lt;B&gt;POLARIZED CAPACITOR&lt;/B&gt;, European symbol</description>
+<gates>
+<gate name="G$1" symbol="RCL_CPOL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="E3.5-8" package="RCL_E3,5-8">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MFR_PN" value="16ZLH100MEFC5X11" constant="no"/>
+<attribute name="MNF" value="rubycon" constant="no"/>
+<attribute name="VALUE" value="100uF" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="1189-1148-ND" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="C10UF_0805" prefix="C" uservalue="yes">
+<description>&lt;b&gt;Capacitor&lt;/b&gt;
+Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
+<gates>
+<gate name="G$1" symbol="SPARKFUN_CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0805" package="SPARKFUN_0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MFR" value="Samsung Electro-Mechanics" constant="no"/>
+<attribute name="MFR_PN" value="CL21A106KPCLQNC" constant="no"/>
+<attribute name="VALUE" value="10uF" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="1276-2402-1-ND" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="R10K_0805" prefix="R" uservalue="yes">
+<description>&lt;B&gt;RESISTOR&lt;/B&gt;, American symbol</description>
+<gates>
+<gate name="G$1" symbol="ADAFRUIT_R-US" x="0" y="0"/>
+</gates>
+<devices>
+<device name="R0805" package="ADAFRUIT_R0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MFR" value="" constant="no"/>
+<attribute name="MFR_PN" value="" constant="no"/>
+<attribute name="VALUE" value="10k" constant="no"/>
+<attribute name="VENDOR" value="" constant="no"/>
+<attribute name="VENDOR_PN" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="R1.0K_0805" prefix="R" uservalue="yes">
+<description>&lt;B&gt;RESISTOR&lt;/B&gt;, American symbol</description>
+<gates>
+<gate name="G$1" symbol="ADAFRUIT_R-US" x="0" y="0"/>
+</gates>
+<devices>
+<device name="R0805" package="ADAFRUIT_R0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MFR" value="Stackpole Electronics Inc" constant="no"/>
+<attribute name="MFR_PN" value="RMCF0805FT1K00" constant="no"/>
+<attribute name="VALUE" value="1.0k" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="RMCF0805FT1K00CT-ND" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="R2.2K_0805" prefix="R" uservalue="yes">
+<description>&lt;B&gt;RESISTOR&lt;/B&gt;, American symbol</description>
+<gates>
+<gate name="G$1" symbol="ADAFRUIT_R-US" x="0" y="0"/>
+</gates>
+<devices>
+<device name="R0805" package="ADAFRUIT_R0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MFR" value="" constant="no"/>
+<attribute name="MFR_PN" value="" constant="no"/>
+<attribute name="VALUE" value="2.2k" constant="no"/>
+<attribute name="VENDOR" value="" constant="no"/>
+<attribute name="VENDOR_PN" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="R330_0805" prefix="R" uservalue="yes">
+<description>&lt;B&gt;RESISTOR&lt;/B&gt;, American symbol</description>
+<gates>
+<gate name="G$1" symbol="ADAFRUIT_R-US" x="0" y="0"/>
+</gates>
+<devices>
+<device name="R0805" package="ADAFRUIT_R0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MFR" value="" constant="no"/>
+<attribute name="MFR_PN" value="" constant="no"/>
+<attribute name="VALUE" value="330" constant="no"/>
+<attribute name="VENDOR" value="" constant="no"/>
+<attribute name="VENDOR_PN" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TACT_SW_EVQQ2" prefix="SW">
+<description>SMT 6mm switch, EVQQ2 series
+&lt;p&gt;http://www.ladyada.net/library/eagle&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="ADAFRUIT_TS2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-EVQQ2" package="ADAFRUIT_EVQ-Q2">
+<connects>
+<connect gate="G$1" pin="P" pad="A"/>
+<connect gate="G$1" pin="P1" pad="A'"/>
+<connect gate="G$1" pin="S" pad="B"/>
+<connect gate="G$1" pin="S1" pad="B'"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MFR" value="panasonic" constant="no"/>
+<attribute name="MFR_PN" value="EVQ-Q2D03W" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="P12935SCT-ND" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
