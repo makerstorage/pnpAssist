@@ -206,23 +206,6 @@ by exp-lbrs.ulp</description>
 <text x="-0.8255" y="-0.762" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
 <text x="1.397" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
 </package>
-<package name="ADAFRUIT_CHIP-LED0805">
-<description>&lt;b&gt;Hyper CHIPLED Hyper-Bright LED&lt;/b&gt;&lt;p&gt;
-LB R99A&lt;br&gt;
-Source: http://www.osram.convergy.de/ ... lb_r99a.pdf</description>
-<wire x1="-0.625" y1="0.45" x2="-0.625" y2="-0.45" width="0.1016" layer="51"/>
-<wire x1="0.625" y1="0.45" x2="0.625" y2="-0.475" width="0.1016" layer="51"/>
-<rectangle x1="-0.675" y1="0" x2="-0.525" y2="0.3" layer="21"/>
-<rectangle x1="0.525" y1="0" x2="0.675" y2="0.3" layer="21"/>
-<rectangle x1="-0.15" y1="0" x2="0.15" y2="0.3" layer="21"/>
-<rectangle x1="-0.675" y1="0.45" x2="0.675" y2="1.05" layer="51"/>
-<rectangle x1="-0.675" y1="-1.05" x2="0.675" y2="-0.45" layer="51"/>
-<smd name="A" x="0" y="-1.05" dx="1.2" dy="1.2" layer="1"/>
-<smd name="C" x="0" y="1.05" dx="1.2" dy="1.2" layer="1"/>
-<text x="-1.27" y="-1.27" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="2.54" y="-1.27" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<text x="-1.27" y="-2.54" size="1.016" layer="21" font="vector">+</text>
-</package>
 <package name="SPARKFUN_0805">
 <wire x1="-0.3" y1="0.6" x2="0.3" y2="0.6" width="0.1524" layer="21"/>
 <wire x1="-0.3" y1="-0.6" x2="0.3" y2="-0.6" width="0.1524" layer="21"/>
@@ -878,31 +861,6 @@ Variant with I2C interface</description>
 <vertex x="-2.413" y="-2.921"/>
 </polygon>
 </symbol>
-<symbol name="ADAFRUIT_LED">
-<wire x1="1.27" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="-1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="1.27" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="0" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="-2.032" y1="-0.762" x2="-3.429" y2="-2.159" width="0.1524" layer="94"/>
-<wire x1="-1.905" y1="-1.905" x2="-3.302" y2="-3.302" width="0.1524" layer="94"/>
-<pin name="A" x="0" y="2.54" visible="off" length="short" direction="pas" rot="R270"/>
-<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
-<text x="3.556" y="-4.572" size="1.778" layer="95" rot="R90">&gt;NAME</text>
-<text x="5.715" y="-4.572" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<polygon width="0.1524" layer="94">
-<vertex x="-3.429" y="-2.159"/>
-<vertex x="-3.048" y="-1.27"/>
-<vertex x="-2.54" y="-1.778"/>
-</polygon>
-<polygon width="0.1524" layer="94">
-<vertex x="-3.302" y="-3.302"/>
-<vertex x="-2.921" y="-2.413"/>
-<vertex x="-2.413" y="-2.921"/>
-</polygon>
-</symbol>
 <symbol name="SPARKFUN_CAP">
 <rectangle x1="-2.032" y1="0.508" x2="2.032" y2="1.016" layer="94"/>
 <rectangle x1="-2.032" y1="1.524" x2="2.032" y2="2.032" layer="94"/>
@@ -1302,82 +1260,6 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <attribute name="VENDOR" value="digikey" constant="no"/>
 <attribute name="VENDOR_PN" value="732-4984-1-ND" constant="no"/>
 </technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="ADAFRUIT_LED" prefix="LED" uservalue="yes">
-<description>&lt;b&gt;LED&lt;/b&gt;&lt;p&gt;
-&lt;u&gt;OSRAM&lt;/u&gt;:&lt;br&gt;
-
-- &lt;u&gt;CHIPLED&lt;/u&gt;&lt;br&gt;
-LG R971, LG N971, LY N971, LG Q971, LY Q971, LO R971, LY R971
-LH N974, LH R974&lt;br&gt;
-LS Q976, LO Q976, LY Q976&lt;br&gt;
-LO Q996&lt;br&gt;
-
-
-- &lt;u&gt;Hyper CHIPLED&lt;/u&gt;&lt;br&gt;
-LW Q18S&lt;br&gt;
-LB Q993, LB Q99A, LB R99A&lt;br&gt;
-
-- &lt;u&gt;SideLED&lt;/u&gt;&lt;br&gt;
-LS A670, LO A670, LY A670, LG A670, LP A670&lt;br&gt;
-LB A673, LV A673, LT A673, LW A673&lt;br&gt;
-LH A674&lt;br&gt;
-LY A675&lt;br&gt;
-LS A676, LA A676, LO A676, LY A676, LW A676&lt;br&gt;
-LS A679, LY A679, LG A679&lt;br&gt;
-
--  &lt;u&gt;Hyper Micro SIDELED®&lt;/u&gt;&lt;br&gt;
-LS Y876, LA Y876, LO Y876, LY Y876&lt;br&gt;
-LT Y87S&lt;br&gt;
-
-- &lt;u&gt;SmartLED&lt;/u&gt;&lt;br&gt;
-LW L88C, LW L88S&lt;br&gt;
-LB L89C, LB L89S, LG L890&lt;br&gt;
-LS L89K, LO L89K, LY L89K&lt;br&gt;
-LS L896, LA L896, LO L896, LY L896&lt;br&gt;
-
-- &lt;u&gt;TOPLED&lt;/u&gt;&lt;br&gt;
-LS T670, LO T670, LY T670, LG T670, LP T670&lt;br&gt;
-LSG T670, LSP T670, LSY T670, LOP T670, LYG T670&lt;br&gt;
-LG T671, LOG T671, LSG T671&lt;br&gt;
-LB T673, LV T673, LT T673, LW T673&lt;br&gt;
-LH T674&lt;br&gt;
-LS T676, LA T676, LO T676, LY T676, LB T676, LH T676, LSB T676, LW T676&lt;br&gt;
-LB T67C, LV T67C, LT T67C, LS T67K, LO T67K, LY T67K, LW E67C&lt;br&gt;
-LS E67B, LA E67B, LO E67B, LY E67B, LB E67C, LV E67C, LT E67C&lt;br&gt;
-LW T67C&lt;br&gt;
-LS T679, LY T679, LG T679&lt;br&gt;
-LS T770, LO T770, LY T770, LG T770, LP T770&lt;br&gt;
-LB T773, LV T773, LT T773, LW T773&lt;br&gt;
-LH T774&lt;br&gt;
-LS E675, LA E675, LY E675, LS T675&lt;br&gt;
-LS T776, LA T776, LO T776, LY T776, LB T776&lt;br&gt;
-LHGB T686&lt;br&gt;
-LT T68C, LB T68C&lt;br&gt;
-
-- &lt;u&gt;Hyper Mini TOPLED®&lt;/u&gt;&lt;br&gt;
-LB M676&lt;br&gt;
-
-- &lt;u&gt;Mini TOPLED Santana®&lt;/u&gt;&lt;br&gt;
-LG M470&lt;br&gt;
-LS M47K, LO M47K, LY M47K&lt;br&gt;
-
-&lt;p&gt;
-Source: http://www.osram.convergy.de/</description>
-<gates>
-<gate name="G$1" symbol="ADAFRUIT_LED" x="0" y="0"/>
-</gates>
-<devices>
-<device name="CHIP-LED0805" package="ADAFRUIT_CHIP-LED0805">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
-</connects>
-<technologies>
-<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -2180,7 +2062,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="C2" library="main_board" deviceset="C0.1UF_0805" device="0805" value="0.1uF"/>
 <part name="SUPPLY8" library="main_board" deviceset="GND" device=""/>
 <part name="SUPPLY9" library="main_board" deviceset="GND" device=""/>
-<part name="ACT" library="main_board" deviceset="ADAFRUIT_LED" device="CHIP-LED0805" value="RED"/>
+<part name="ACT" library="main_board" deviceset="LED_RED_0805" device="0805" value="ACT"/>
 <part name="R1" library="main_board" deviceset="R1.0K_0805" device="R0805" value="1.0k"/>
 <part name="SW_NEXT" library="main_board" deviceset="TACT_SW_EVQQ2" device="-EVQQ2" value="S_TACT"/>
 <part name="P+7" library="main_board" deviceset="VCC" device=""/>
@@ -2456,7 +2338,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </instance>
 <instance part="ACT" gate="G$1" x="330.2" y="213.36" smashed="yes" rot="R90">
 <attribute name="NAME" x="334.772" y="216.916" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="334.772" y="219.075" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R1" gate="G$1" x="345.44" y="213.36" smashed="yes" rot="R180">
 <attribute name="NAME" x="349.25" y="211.8614" size="1.778" layer="95" rot="R180"/>
@@ -2466,8 +2347,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <attribute name="NAME" x="287.02" y="97.79" size="1.778" layer="95"/>
 <attribute name="VALUE" x="292.735" y="95.25" size="1.778" layer="96"/>
 </instance>
-<instance part="P+7" gate="VCC" x="304.8" y="91.44" smashed="yes" rot="R270">
-<attribute name="VALUE" x="302.26" y="93.98" size="1.778" layer="96"/>
+<instance part="P+7" gate="VCC" x="307.34" y="93.98" smashed="yes">
+<attribute name="VALUE" x="304.8" y="91.44" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R3" gate="G$1" x="271.78" y="86.36" smashed="yes" rot="R90">
 <attribute name="NAME" x="270.2814" y="82.55" size="1.778" layer="95" rot="R90"/>
@@ -2494,15 +2375,15 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <instance part="GND1" gate="1" x="271.78" y="73.66" smashed="yes">
 <attribute name="VALUE" x="269.24" y="71.12" size="1.778" layer="96"/>
 </instance>
-<instance part="P+10" gate="VCC" x="287.02" y="43.18" smashed="yes" rot="R180">
-<attribute name="VALUE" x="289.56" y="45.72" size="1.778" layer="96" rot="R270"/>
+<instance part="P+10" gate="VCC" x="294.64" y="58.42" smashed="yes">
+<attribute name="VALUE" x="292.1" y="55.88" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R2" gate="G$1" x="271.78" y="45.72" smashed="yes" rot="R90">
-<attribute name="NAME" x="270.2814" y="41.91" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="275.082" y="41.91" size="1.778" layer="96" rot="R90"/>
+<instance part="R2" gate="G$1" x="279.4" y="45.72" smashed="yes" rot="R90">
+<attribute name="NAME" x="277.9014" y="41.91" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="282.702" y="41.91" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND7" gate="1" x="271.78" y="33.02" smashed="yes">
-<attribute name="VALUE" x="269.24" y="30.48" size="1.778" layer="96"/>
+<instance part="GND7" gate="1" x="279.4" y="33.02" smashed="yes">
+<attribute name="VALUE" x="276.86" y="30.48" size="1.778" layer="96"/>
 </instance>
 <instance part="U$1" gate="G$1" x="401.32" y="71.12" smashed="yes" rot="R90">
 <attribute name="NAME" x="370.84" y="88.9" size="1.778" layer="95"/>
@@ -2764,7 +2645,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="271.78" y1="40.64" x2="271.78" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="279.4" y1="40.64" x2="279.4" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND"/>
@@ -2846,11 +2727,10 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="284.48" y1="50.8" x2="279.4" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="50.8" x2="271.78" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="40.64" x2="279.4" y2="50.8" width="0.1524" layer="91"/>
-<junction x="279.4" y="50.8"/>
-<label x="279.4" y="40.64" size="1.778" layer="95" rot="R270" xref="yes"/>
+<label x="276.86" y="50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="J1" gate="G$1" pin="1"/>
+<wire x1="279.4" y1="50.8" x2="276.86" y2="50.8" width="0.1524" layer="91"/>
+<junction x="279.4" y="50.8"/>
 </segment>
 </net>
 <net name="D3" class="0">
@@ -3083,7 +2963,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <pinref part="SW_NEXT" gate="G$1" pin="S1"/>
 <wire x1="294.64" y1="88.9" x2="294.64" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="P+7" gate="VCC" pin="VCC"/>
-<wire x1="302.26" y1="91.44" x2="294.64" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="91.44" x2="294.64" y2="91.44" width="0.1524" layer="91"/>
 <junction x="294.64" y="91.44"/>
 </segment>
 <segment>
@@ -3142,7 +3022,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
 <pinref part="P+10" gate="VCC" pin="VCC"/>
-<wire x1="287.02" y1="45.72" x2="287.02" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="50.8" x2="287.02" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="45.72" x2="294.64" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="45.72" x2="294.64" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+18" gate="VCC" pin="VCC"/>

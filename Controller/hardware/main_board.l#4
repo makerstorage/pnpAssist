@@ -1932,11 +1932,11 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFR" value="" constant="no"/>
-<attribute name="MFR_PN" value="" constant="no"/>
+<attribute name="MFR" value="Stackpole Electronics Inc" constant="no"/>
+<attribute name="MFR_PN" value="RMCF0805FT10K0" constant="no"/>
 <attribute name="VALUE" value="10k" constant="no"/>
-<attribute name="VENDOR" value="" constant="no"/>
-<attribute name="VENDOR_PN" value="" constant="no"/>
+<attribute name="VENDOR" value="digikey" constant="no"/>
+<attribute name="VENDOR_PN" value="RMCF0805FT10K0CT-ND" constant="no"/>
 </technology>
 </technologies>
 </device>
