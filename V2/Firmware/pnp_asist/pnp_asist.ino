@@ -34,6 +34,9 @@
 #include <SD.h>
 #include <SPI.h>
 
+
+#define DEBUG
+
 // input pnp File
 File pnpFile;
 
@@ -66,7 +69,7 @@ char bufferZ [20];
 
 
 //#define SPEED 2000
-#define StepPerMM 80 
+#define StepPerMM 160 
 
 
 //Result  Resolution  Teeth Step angle  Stepping  Belt
@@ -87,8 +90,8 @@ char bufferZ [20];
 //length of y axis
 //#define MAX_Y_LENGTH 250
 
-//#define CENTER_Y_OFFSET 5020
-#define CENTER_Y_OFFSET 2510
+#define CENTER_Y_OFFSET 5020
+
 
 #define AXIS_OFFSET 30 // where your 0,0 away from both axis v2
 
@@ -110,8 +113,8 @@ const byte yHomePin = 2;
 
 
 // Stepper speeds in RPM
-//int iDriveSpeed = 400;
-int iDriveSpeed = 300;
+int iDriveSpeed = 400;
+
 
 volatile long CurPos         = 0;
 volatile long TargetPos      = 0;
@@ -318,6 +321,15 @@ void loop() {
     
   fileLine = pnpFile.readStringUntil('\n');
   parseCommand(fileLine+" ");
+
+  #ifdef DEBUG
+    Serial.println ("f0: " + String(field[0]));
+    Serial.println ("f1: " + String(field[1]));
+    Serial.println ("f2: " + String(field[2]));
+    Serial.println ("f3: " + String(field[3]));
+    Serial.println ("f4: " + String(field[4]));
+    Serial.println ("f5: " + String(field[5]));
+  #endif
   
   // display line contents
   sprintf(bufferX, field[0]); // component name ,
