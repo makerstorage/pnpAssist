@@ -217,14 +217,21 @@ by exp-lbrs.ulp</description>
 <package name="RCL_E3,5-8">
 <description>&lt;b&gt;ELECTROLYTIC CAPACITOR&lt;/b&gt;&lt;p&gt;
 grid 3.5 mm, diameter 8 mm</description>
-<circle x="0" y="0" radius="3" width="0.1524" layer="21"/>
-<wire x1="-1.778" y1="1.397" x2="-1.016" y2="1.397" width="0.1524" layer="21"/>
-<wire x1="-1.397" y1="1.016" x2="-1.397" y2="1.778" width="0.1524" layer="21"/>
-<wire x1="1.778" y1="-1.27" x2="2.286" y2="-1.27" width="0.1524" layer="51"/>
-<pad name="+" x="-1" y="0" drill="0.75"/>
-<pad name="-" x="1" y="0" drill="0.75" shape="octagon"/>
-<text x="-2.921" y="3.302" size="1.016" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.286" y="-4.318" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
+<circle x="0" y="0" radius="4.064" width="0.1524" layer="21"/>
+<wire x1="-3.429" y1="1.143" x2="-2.667" y2="1.143" width="0.1524" layer="21"/>
+<wire x1="-3.048" y1="0.762" x2="-3.048" y2="1.524" width="0.1524" layer="21"/>
+<wire x1="-1.651" y1="0" x2="-0.762" y2="0" width="0.1524" layer="51"/>
+<wire x1="-0.762" y1="0" x2="-0.762" y2="-1.27" width="0.1524" layer="51"/>
+<wire x1="-0.762" y1="-1.27" x2="-0.254" y2="-1.27" width="0.1524" layer="51"/>
+<wire x1="-0.254" y1="-1.27" x2="-0.254" y2="1.27" width="0.1524" layer="51"/>
+<wire x1="-0.254" y1="1.27" x2="-0.762" y2="1.27" width="0.1524" layer="51"/>
+<wire x1="-0.762" y1="1.27" x2="-0.762" y2="0" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="0" x2="1.651" y2="0" width="0.1524" layer="51"/>
+<rectangle x1="0.254" y1="-1.27" x2="0.762" y2="1.27" layer="51"/>
+<pad name="+" x="-1.778" y="0" drill="0.8128" diameter="1.6002"/>
+<pad name="-" x="1.778" y="0" drill="0.8128" diameter="1.6002" shape="octagon"/>
+<text x="3.302" y="2.794" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.286" y="-3.048" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
 <package name="LINEAR_TO252">
 <description>&lt;b&gt;SMALL OUTLINE TRANSISTOR&lt;/b&gt;&lt;p&gt;
@@ -1663,11 +1670,11 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFR" value="Stackpole Electronics Inc" constant="no"/>
-<attribute name="MFR_PN" value="RMCF0805FT10K0" constant="no"/>
+<attribute name="MFR" value="" constant="no"/>
+<attribute name="MFR_PN" value="" constant="no"/>
 <attribute name="VALUE" value="10k" constant="no"/>
-<attribute name="VENDOR" value="digikey" constant="no"/>
-<attribute name="VENDOR_PN" value="RMCF0805FT10K0CT-ND" constant="no"/>
+<attribute name="VENDOR" value="" constant="no"/>
+<attribute name="VENDOR_PN" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1686,11 +1693,11 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFR" value="Stackpole Electronics Inc" constant="no"/>
-<attribute name="MFR_PN" value="RMCF0805FT1K00" constant="no"/>
+<attribute name="MFR" value="" constant="no"/>
+<attribute name="MFR_PN" value="" constant="no"/>
 <attribute name="VALUE" value="1.0k" constant="no"/>
-<attribute name="VENDOR" value="digikey" constant="no"/>
-<attribute name="VENDOR_PN" value="RMCF0805FT1K00CT-ND" constant="no"/>
+<attribute name="VENDOR" value="" constant="no"/>
+<attribute name="VENDOR_PN" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1709,11 +1716,11 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFR" value="TE Connectivity Passive Product" constant="no"/>
-<attribute name="MFR_PN" value="CRGCQ0805F330R" constant="no"/>
+<attribute name="MFR" value="" constant="no"/>
+<attribute name="MFR_PN" value="" constant="no"/>
 <attribute name="VALUE" value="330" constant="no"/>
-<attribute name="VENDOR" value="digikey" constant="no"/>
-<attribute name="VENDOR_PN" value="A129743CT-ND" constant="no"/>
+<attribute name="VENDOR" value="" constant="no"/>
+<attribute name="VENDOR_PN" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1732,11 +1739,11 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="MFR" value="Panasonic Electronic Components" constant="no"/>
-<attribute name="MFR_PN" value="ERA-6AED222V" constant="no"/>
+<attribute name="MFR" value="" constant="no"/>
+<attribute name="MFR_PN" value="" constant="no"/>
 <attribute name="VALUE" value="2.2k" constant="no"/>
-<attribute name="VENDOR" value="digikey" constant="no"/>
-<attribute name="VENDOR_PN" value="P2.2KBNCT-ND" constant="no"/>
+<attribute name="VENDOR" value="" constant="no"/>
+<attribute name="VENDOR_PN" value="" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1986,7 +1993,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="C14" library="main_board" deviceset="C0.1UF_0805" device="0805" value="0.1uF"/>
 <part name="P+18" library="main_board" deviceset="VCC" device=""/>
 <part name="R9" library="main_board" deviceset="R2.2K_0805" device="R0805" value="2.2k"/>
-<part name="12V" library="main_board" deviceset="LED_RED_0805" device="0805" value="12v"/>
+<part name="12V" library="main_board" deviceset="LED_RED_0805" device="0805"/>
 <part name="P+17" library="main_board" deviceset="+12V" device=""/>
 <part name="C8" library="main_board" deviceset="C0.1UF_0805" device="0805" value="0.1uF"/>
 <part name="GND4" library="main_board" deviceset="GND" device=""/>
@@ -2020,6 +2027,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="P+7" library="main_board" deviceset="VCC" device=""/>
 <part name="R3" library="main_board" deviceset="R10K_0805" device="R0805" value="10k"/>
 <part name="P+8" library="main_board" deviceset="VCC" device=""/>
+<part name="GND2" library="main_board" deviceset="GND" device=""/>
 <part name="R10" library="main_board" deviceset="R330_0805" device="R0805" value="330"/>
 <part name="C4" library="main_board" deviceset="C100UF_EC" device="E3.5-8" value="100uF"/>
 <part name="JP1" library="main_board" deviceset="ADAFRUIT_PINHD-1X3" device=""/>
@@ -2058,7 +2066,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="GND15" library="main_board" deviceset="GND" device=""/>
 <part name="C1" library="main_board" deviceset="C10UF_0805" device="0805" value="10uF"/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
-<part name="V1" library="main_board" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2309,6 +2316,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <instance part="P+8" gate="VCC" x="208.28" y="27.94" smashed="yes">
 <attribute name="VALUE" x="205.74" y="25.4" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="GND2" gate="1" x="231.14" y="12.7" smashed="yes">
+<attribute name="VALUE" x="228.6" y="10.16" size="1.778" layer="96"/>
+</instance>
 <instance part="R10" gate="G$1" x="233.68" y="20.32" smashed="yes">
 <attribute name="NAME" x="229.87" y="21.8186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="229.87" y="17.018" size="1.778" layer="96"/>
@@ -2443,9 +2453,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <attribute name="LAST_DATE_TIME" x="337.82" y="1.27" size="2.54" layer="94"/>
 <attribute name="SHEET" x="411.48" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="342.9" y="19.05" size="2.54" layer="94"/>
-</instance>
-<instance part="V1" gate="1" x="236.22" y="12.7" smashed="yes">
-<attribute name="VALUE" x="234.315" y="9.525" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -2644,15 +2651,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <wire x1="381" y1="177.8" x2="375.92" y2="177.8" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="1" pin="GND"/>
 <wire x1="375.92" y1="177.8" x2="375.92" y2="167.64" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C4" gate="G$1" pin="-"/>
-<wire x1="208.28" y1="15.24" x2="236.22" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="15.24" x2="236.22" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="3"/>
-<wire x1="236.22" y1="17.78" x2="243.84" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="V1" gate="1" pin="GND"/>
-<junction x="236.22" y="15.24"/>
 </segment>
 </net>
 <net name="RX" class="0">
@@ -3262,9 +3260,27 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <wire x1="83.82" y1="33.02" x2="81.28" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="C4" gate="G$1" pin="-"/>
+<wire x1="208.28" y1="15.24" x2="231.14" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="231.14" y1="15.24" x2="236.22" y2="15.24" width="0.1524" layer="91"/>
+<junction x="231.14" y="15.24"/>
+<wire x1="236.22" y1="15.24" x2="236.22" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="3"/>
+<wire x1="236.22" y1="17.78" x2="243.84" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="202,1,68.58,-63.5,DIS1,D0,,,,"/>
+<approved hash="202,1,71.12,-63.5,DIS1,D1,,,,"/>
+<approved hash="202,1,73.66,-63.5,DIS1,D2,,,,"/>
+<approved hash="202,1,76.2,-63.5,DIS1,D3,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
